@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ版放大镜</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .container{
+            width: 800px;
+            margin:20px auto;
+            border:1px solid black;
+            display: flex;
+        }
+        .left{
+            width: 400px;
+            position: relative;
+        }
+ 
+        .img_top_box{
+            height: 400px;
+        }
+        .img_top_box img{
+            width: 400px;
+            height: 400px;
+            display: none;
+        }
+        .img_top_box img:first-child{
+            display: block;
+        }
+        .shadow{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            top:0;
+            display: none;
+        }
+    
+        .img_ctrl_box ul{
+            display:flex;
+        }
+        .img_ctrl_box ul li{
+            width: 80px;
+            height: 80px;
+            border:5px solid #fff;
+            box-sizing: border-box;
+        }
+        .img_ctrl_box ul li img{
+            width: 100%;
+            height: 100%;
+        }
+        .img_ctrl_box ul li.active{
+            border-color: orange;
+        }
+        .right{
+            width: 400px;
+            height: 400px;
+            display: none;
+            overflow: hidden;
+        }
+        .right img{
+            width: 800px;
+            height: 800px;
+            display: none;
+        }
+        .right img:first-child{
+            display: block;
+        }
+    </style>
+    <script src="./jquery-1.11.1.js"></script>
+    <script>
+    $(function(){
+        // 鼠标移入控制小图片，大图片进行切换
+        $('.img_ctrl_box li').mouseover(function(){
+            $(this).addClass('active').siblings().removeClass('active')
+            $('.img_top_box img').eq( $(this).index() ).show().siblings().hide()
+            $('.right img').eq( $(this).index() ).show().siblings().hide()
+        })
+
+        // 鼠标移入 img_top_box 的时候shadow出现和right出现
+        // 当鼠标在 img_top_box 中移动的时候
+        $('.img_window').mousemove(function(e){
+            $('.shadow').show()
+            $('.right').show()
+            // 获取鼠标在屏幕中的坐标
+            let x = e.clientX-$('.img_window').offset().left-100;
+            let y = e.clientY-$('.img_window').offset().top-100;
+            x = x<0?0:x;
+            x = x>200?200:x;
+            y = y<0?0:y;
+            y = y>200?200:y;
+
+            $('.shadow').css({
+                left:x+'px',
+                top:y+'px'
+            })
+            $('.right img').css({
+                marginLeft:-x*2+"px",
+                marginTop:-y*2+"px"
+            })
+        })        
+
+        $('.img_window').mouseout(function(){
+            $('.shadow').hide()
+            $('.right').hide()
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="img_window">
+                <div class="img_top_box">
+                    <img src="./motoImg/1.webp" alt="">
+                    <img src="./motoImg/2.webp" alt="">
+                    <img src="./motoImg/3.webp" alt="">
+                    <img src="./motoImg/4.webp" alt="">
+                    <img src="./motoImg/5.webp" alt="">
+                </div>
+                <div class="shadow"></div>
+            </div>
+            <div class="img_ctrl_box">
+                <ul>
+                    <li class="active"><img src="./motoimg/1.webp" alt=""></li>
+                    <li><img src="./motoimg/2.webp" alt=""></li>
+                    <li><img src="./motoimg/3.webp" alt=""></li>
+                    <li><img src="./motoimg/4.webp" alt=""></li>
+                    <li><img src="./motoimg/5.webp" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <img src="./motoImg/1.webp" alt="">
+            <img src="./motoImg/2.webp" alt="">
+            <img src="./motoImg/3.webp" alt="">
+            <img src="./motoImg/4.webp" alt="">
+            <img src="./motoImg/5.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>

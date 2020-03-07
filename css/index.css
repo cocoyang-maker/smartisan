@@ -1,0 +1,76 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;cursor: pointer;}
+
+header{background: linear-gradient(to left,#121214,rgb(58, 56, 56),#121214);height: 45px;width: 100%;display: flex;}
+header>ul{display: flex;width: 912px;margin-left: 200px;}
+header>ul>li{font: 14px/45px "";color: grey;margin:0 10px;}
+header>div{margin-left: 170px;}
+header>div>a>img{padding-top: 10px;margin-left: 10px;}
+
+
+
+.nav{display: flex;width: 100%;height: 75px;border-bottom: 1px solid rgb(202, 200, 200);
+position: relative;z-index: 3;background: white;}
+.nav>ul{display: flex;width: 775px;margin-left: 100px;}
+.nav>ul>li{font: 14px/75px "";padding: 0 10px;color: grey;}
+.nav>.nav-ss{border: 1px rgb(189, 187, 187) solid;width: 340px;height: 36px;border-radius:18px ;
+margin-top: 20px;}
+.nav>.nav-ss>input{border: none;}
+.nav>.nav-ss>a>img{padding: 7px 5px;}
+.nav>.nav-ss>button{border-radius: 10px;background-color: rgb(175, 247, 162);
+border: green 1px solid;font: bold 10px/20px "";color: green;padding: 0 4px;}
+.nav>.nav-list{position: absolute;left:0;top:75px;width: 100%;height: 200px;
+background-color: white;display: flex;justify-content:center;display: none;}
+.nav>.nav-list>ul{display: flex;}
+.nav>.nav-list>ul>li{margin: 20px 50px;}
+
+section{width: 100%;background: rgb(235, 234, 230);position: relative;padding-top: 50px;}
+section>.home-wrap{width: 1218px;height: 553px;margin: 0 auto;border: 1px solid rgb(194, 192, 192);
+position: relative;border-radius: 10px;}
+section>.home-wrap>.pointer1>img{width: 100%;height: 100%;position:absolute;
+left: 0;top:0;}
+section>.home-wrap>.pointer1>.show{z-index: 1;}
+section>.home-wrap>.pointer2{display: flex;position: absolute;bottom: 20px;left: 500px;}
+section>.home-wrap>.pointer2 span{width: 8px;height: 8px;background: rgb(160, 158, 158);
+border-radius: 50%;margin-left: 10px;z-index: 2;}
+section>.home-wrap>.pointer2>.active{background:white;}
+
+section>.choice-good{width: 1218px;height: 200px;margin: 50px auto;border: 1px solid rgb(194, 192, 192);
+border-radius: 10px;display: flex;}
+section>.choice-good>ul{display: flex;flex: 1;}
+section>.choice-good>ul>li>img{width: 304px;height: 198px;}
+
+section>.hot-goods{width: 1218px;height: 490px;margin: 50px auto;border: 1px solid rgb(194, 192, 192);
+border-radius: 10px;overflow: hidden;position: relative;background: white;}
+
+section>.hot-goods>.hot{border-bottom: 1px solid rgb(194, 192, 192);display: flex;justify-content: space-between;
+background:  rgb(247, 243, 243);}
+section>.hot-goods>.hot>h3{margin-left: 20px;font: bold 20px/30px "";}
+section>.hot-goods>.hot>.hot1{margin: 20px;display: flex;}
+section>.hot-goods>.hot>.hot1>span{width: 24px;height: 24px;border: 1px solid rgb(194, 192, 192);
+border-radius: 50%;display: block;text-align: center;color:  rgb(202, 199, 199);}
+section>.hot-goods>.hot>.hot1>span:nth-of-type(1){margin-right: 25px;}
+section>.hot-goods>.hot>.hot1>.show{border: 1px solid  gray;color: gray;font-weight:bold}
+section>.hot-goods>ul{display: flex;flex-wrap: nowrap;width: 2436px;}
+section>.hot-goods>ul>li{width: 304px;}
+section>.hot-goods>ul>li>img{margin-top: 50px;margin-bottom: 20px;}
+section>.hot-goods>ul>li>p{text-align: center;}
+section>.hot-goods>ul>li>.name{font: bold 14px/30px "";}
+section>.hot-goods>ul>li>.tittle{font: 10px/30px "";color: gray;}
+section>.hot-goods>ul>li>.price{color: red;font: bold 16px/30px "";}
+
+
+section>.goods-main{width: 1218px;height: 912px;margin: 0 auto;border: 1px solid rgb(194, 192, 192);
+border-radius: 10px;background: white;position: relative;}
+section>.goods-main>.goods-tittle{border-bottom: 1px solid rgb(194, 192, 192);background:  rgb(247, 243, 243);
+display: flex;}
+section>.goods-main>.goods-tittle>h3{margin-left: 20px;font: bold 20px/30px "";}
+section>.goods-main>ul{display: flex;flex-wrap:wrap-reverse;width: 1218px;flex-direction:row-reverse;}
+section>.goods-main>ul>li{width: 304px;}
+section>.goods-main>ul>li>img{margin-top: 50px;margin-bottom: 20px;}
+section>.goods-main>ul>li>p{text-align: center;}
+section>.goods-main>ul>li>.name{font: bold 14px/30px "";}
+section>.goods-main>ul>li>.tittle{font: 10px/30px "";color: gray;}
+section>.goods-main>ul>li>.price{color: red;font: bold 16px/30px "";}
+section>.goods-main>img{position: absolute;left:0;top:61px}

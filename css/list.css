@@ -1,0 +1,45 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;cursor: pointer;}
+
+header{background: linear-gradient(to left,#121214,rgb(58, 56, 56),#121214);height: 45px;width: 100%;display: flex;}
+header>ul{display: flex;width: 912px;margin-left: 200px;}
+header>ul>li{font: 14px/45px "";color: grey;margin:0 10px;}
+header>div{margin-left: 170px;}
+header>div>a>img{padding-top: 10px;margin-left: 10px;}
+
+
+
+.nav{display: flex;width: 100%;height: 75px;border-bottom: 1px solid rgb(202, 200, 200);
+position: relative;z-index: 3;background: white;}
+.nav>ul{display: flex;width: 775px;margin-left: 100px;}
+.nav>ul>li{font: 14px/75px "";padding: 0 10px;color: grey;}
+.nav>.nav-ss{border: 1px rgb(189, 187, 187) solid;width: 340px;height: 36px;border-radius:18px ;
+margin-top: 20px;}
+.nav>.nav-ss>a>img{padding: 7px 5px;}
+.nav>.nav-ss>input{width: 150px;height: 30px;margin-top: 2px;margin-left: 14px;border: none;}
+
+.nav>.nav-ss>button{border-radius: 10px;background-color: rgb(175, 247, 162);
+border: green 1px solid;font: bold 10px/20px "";color: green;padding: 0 4px;}
+.nav>.nav-list{position: absolute;left:0;top:75px;width: 100%;height: 200px;
+background-color: white;display: flex;justify-content:center;display: none;}
+.nav>.nav-list>ul{display: flex;}
+.nav>.nav-list>ul>li{margin: 20px 50px;}
+
+
+
+section{width: 100%;background: rgb(235, 234, 230);position: relative;}
+section>.list-lie{display: flex;width: 1218px;margin: 0 auto;}
+section>.list-lie>span{font: 14px/40px "";margin-left: 20px;cursor: pointer;}
+
+section>.box {width: 1218px;margin: 0 auto;border: 1px solid rgb(194, 192, 192);position: relative;
+background-color: white;border-radius: 10px;} 
+section>.box > ul {width: 100%;display: flex;flex-wrap: wrap;} 
+section>.box > ul > li {width: 20%;display: flex;
+justify-content: center;align-items: center;flex-direction: column;}
+section>.box > ul > li>p{text-align: center;}
+section>.box > ul > li>.name{font: bold 14px/30px "";}
+section>.box > ul > li>.tittle{font: 10px/30px "";color: gray;}
+section>.box > ul > li>.price{color: red;font: bold 16px/30px "";}
+section>.box > ul > li> img { width: 153px;height: 206px;display: block;}
+section>.pagi{width: 1218px;margin: 0 auto;display: flex;justify-content: center;}
